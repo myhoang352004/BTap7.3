@@ -1,0 +1,76 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 2, 2024, 4:11:55 PM
+    Author     : PC
+*/
+body{
+    text-align: center;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 7cm;
+    width: 60%;
+}
+
+td, th {
+    border: 2px solid #C4E7BA;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(odd) {
+    background-color: #DFF5DA;
+}
+tr:nth-child(even) {
+    background-color: #C4E7BA;
+}
+h2{
+    color: deeppink;
+}
+h1{
+    color: crimson;
+}
+h3{
+    font-size: 1.5cm;
+    color: chocolate;
+}
+h4{
+    font-size:1cm;
+}
+.submit {
+    background-color: white;
+    color: #51A873;
+    text-align: center;
+    font-size: 0.5cm;
+    border-radius: 6px;
+    border: 0px solid #C4E7BA;
+}
+.submit:hover {
+    background-color: #F7F7C9; /* Màu nền khi hover */
+    font-size: 0.5cm;
+    color: black; /* Màu chữ khi hover */
+    border: 0px solid white; /* Màu viền khi hover */
+}
+p{
+    font-size: 0.6cm;
+}
+#go {
+    background-color: #C4E7BA;
+    text-align: center;
+    color: black;
+    font-size: 0.7cm;
+    border-radius: 6px;
+    border: 0px solid #667158;
+}
+#checkout{
+    background-color: #C4E7BA;
+    text-align: center;
+    color: black;
+    font-size: 0.7cm;
+    border-radius: 6px;
+    border: 0px solid white;
+}
