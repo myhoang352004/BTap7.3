@@ -1,4 +1,3 @@
-/* Đặt font chữ chung và căn chỉnh cơ bản */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -8,7 +7,6 @@ body {
     padding: 0;
 }
 
-/* Định dạng tiêu đề */
 h1 {
     color: crimson;
     font-size: 1.8em;
@@ -32,7 +30,6 @@ h4 {
     margin-top: 10px;
 }
 
-/* Định dạng bảng */
 table {
     font-family: Arial, sans-serif;
     border-collapse: collapse;
@@ -60,7 +57,6 @@ tr:nth-child(even) {
     background-color: #C4E7BA;
 }
 
-/* Định dạng nút submit */
 .submit {
     background-color: #51A873;
     color: white;
@@ -77,7 +73,6 @@ tr:nth-child(even) {
     color: black;
 }
 
-/* Định dạng nút checkout */
 #checkout, #go {
     background-color: #C4E7BA;
     color: black;
