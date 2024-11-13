@@ -1,76 +1,102 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : Oct 2, 2024, 4:11:55 PM
-    Author     : PC
-*/
-body{
+/* Đặt font chữ chung và căn chỉnh cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
+/* Định dạng tiêu đề */
+h1 {
+    color: crimson;
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+h2 {
+    color: deeppink;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: chocolate;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/* Định dạng bảng */
 table {
-    font-family: arial, sans-serif;
+    font-family: Arial, sans-serif;
     border-collapse: collapse;
-    text-align: center;
-    margin-left: 7cm;
-    width: 60%;
+    width: 90%; /* Tăng chiều rộng bảng lên 90% */
+    max-width: 1200px; /* Giới hạn độ rộng tối đa để bảng không quá lớn trên màn hình lớn */
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 td, th {
     border: 2px solid #C4E7BA;
     text-align: left;
-    padding: 8px;
+    padding: 16px; /* Tăng padding để bảng rộng và thoáng hơn */
+    font-size: 1em;
 }
+
 tr:nth-child(odd) {
     background-color: #DFF5DA;
 }
+
 tr:nth-child(even) {
     background-color: #C4E7BA;
 }
-h2{
-    color: deeppink;
-}
-h1{
-    color: crimson;
-}
-h3{
-    font-size: 1.5cm;
-    color: chocolate;
-}
-h4{
-    font-size:1cm;
-}
+
+/* Định dạng nút submit */
 .submit {
-    background-color: white;
-    color: #51A873;
-    text-align: center;
-    font-size: 0.5cm;
+    background-color: #51A873;
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
     border-radius: 6px;
-    border: 0px solid #C4E7BA;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 .submit:hover {
-    background-color: #F7F7C9; /* Màu nền khi hover */
-    font-size: 0.5cm;
-    color: black; /* Màu chữ khi hover */
-    border: 0px solid white; /* Màu viền khi hover */
-}
-p{
-    font-size: 0.6cm;
-}
-#go {
-    background-color: #C4E7BA;
-    text-align: center;
+    background-color: #F7F7C9;
     color: black;
-    font-size: 0.7cm;
-    border-radius: 6px;
-    border: 0px solid #667158;
 }
-#checkout{
+
+/* Định dạng nút checkout */
+#checkout, #go {
     background-color: #C4E7BA;
-    text-align: center;
     color: black;
-    font-size: 0.7cm;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
     border-radius: 6px;
-    border: 0px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#checkout:hover, #go:hover {
+    background-color: #A9D49E;
+    color: #333;
+}
+
+/* Định dạng cho đoạn văn */
+p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
 }
