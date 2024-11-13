@@ -73,7 +73,7 @@ tr:nth-child(even) {
 }
 
 .submit:hover {
-    background-color: #F7F7C9;
+    background-color: azure;
     color: black;
 }
 
