@@ -1,6 +1,11 @@
 D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\business\Item.java
+D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\data\DBUtil.java
+D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\data\UserDB.java
+D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\email\EmailListServlet.java
 D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\com\mycompany\tuan6\JakartaRestConfiguration.java
+D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\util\MailUtilLocal.java
 D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\business\Total.java
 D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\business\Cart.java
 D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\cart\CartServlet.java
 D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\com\mycompany\tuan6\resources\JakartaEE10Resource.java
+D:\HK1-N3\LTWEB\BaiTapNB\W6\Tuan6\src\main\java\murach\business\User.java

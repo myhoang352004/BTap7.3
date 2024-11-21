@@ -13,6 +13,18 @@
         <!--        <welcome-file>index.html</welcome-file>-->
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>505</error-code>
+        <location>/WEB-INF/error_500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/WEB-INF/404.jsp</location>
+    </error-page>
     <servlet>
         <servlet-name>CartServlet</servlet-name>
         <servlet-class>murach.cart.CartServlet</servlet-class>
@@ -20,5 +32,13 @@
     <servlet-mapping>
         <servlet-name>CartServlet</servlet-name>
         <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EmailListServlet</servlet-name>
+        <servlet-class>murach.email.EmailListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmailListServlet</servlet-name>
+        <url-pattern>/emailList</url-pattern>
     </servlet-mapping>
 </web-app>

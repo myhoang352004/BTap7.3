@@ -1,6 +1,11 @@
 murach\business\Total.class
+murach\email\EmailListServlet.class
 com\mycompany\tuan6\resources\JakartaEE10Resource.class
 murach\business\Item.class
+murach\data\DBUtil.class
+murach\business\User.class
+murach\util\MailUtilLocal.class
 com\mycompany\tuan6\JakartaRestConfiguration.class
 murach\business\Cart.class
 murach\cart\CartServlet.class
+murach\data\UserDB.class

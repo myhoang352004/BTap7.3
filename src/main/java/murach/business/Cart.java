@@ -59,4 +59,13 @@ public class Cart {
             return;
         }
     }
+    public double getTotalPrice() {
+        double total = 0.0;
+        for (Total totalItem : totals) {
+            total += totalItem.getItem().getPrice() * totalItem.getQuantity();
+        }
+        return total;
+    }
+    
+    
 }
