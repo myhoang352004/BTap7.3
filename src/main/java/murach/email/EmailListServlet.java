@@ -51,11 +51,11 @@ public class EmailListServlet extends HttpServlet {
             String subject = "Welcome to our email list";
             StringBuilder emailBody = new StringBuilder();
             emailBody.append("<html><body>");
-            emailBody.append("<table border='1' cellspacing='0' cellpadding='10' style='border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;'>");
+            emailBody.append("<table border='0' cellspacing='0' cellpadding='15' style='border: 1px solid #ddd; border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;'>");
 
-            // Hàng đầu tiên: Dear [Tên]
+            // Header: Lời chào và màu sắc nổi bật
             emailBody.append("<tr>");
-            emailBody.append("<td colspan='3' style='text-align: left; font-weight: bold; font-size: 14px; background-color: #C4E7BA;'>");
+            emailBody.append("<td colspan='3' style='text-align: left; font-weight: bold; font-size: 16px; background-color: #4BA1F0; color: white;'>");
             emailBody.append("Dear ").append(firstName).append(",");
             emailBody.append("</td>");
             emailBody.append("</tr>");
@@ -65,40 +65,45 @@ public class EmailListServlet extends HttpServlet {
             emailBody.append("<td colspan='3'>&nbsp;</td>");
             emailBody.append("</tr>");
 
-            // Hàng tiếp theo: Thông báo cảm ơn
+            // Lời cảm ơn
             emailBody.append("<tr>");
-            emailBody.append("<td colspan='3'>");
-            emailBody.append("Thank you for your order! Here are the details:");
+            emailBody.append("<td colspan='3' style='font-size: 14px; color: #555;'>");
+            emailBody.append("Thank you for your order! Below are the details:");
             emailBody.append("</td>");
             emailBody.append("</tr>");
 
-            // Kiểm tra giỏ hàng và hiển thị thông tin sản phẩm
+            // Kiểm tra và hiển thị thông tin giỏ hàng
             if (cart != null && !cart.getTotals().isEmpty()) {
                 // Tiêu đề bảng
-                emailBody.append("<tr>");
-                emailBody.append("<th style='text-align: left;'>Product Name</th>");
-                emailBody.append("<th style='text-align: left;'>Quantity</th>");
-                emailBody.append("<th style='text-align: left;'>Amount</th>");
+                emailBody.append("<tr style='background-color: #f9f9f9; border-bottom: 2px solid #ddd;'>");
+                emailBody.append("<th style='text-align: left; padding: 10px; border-bottom: 1px solid #ddd;'>Product Name</th>");
+                emailBody.append("<th style='text-align: left; padding: 10px; border-bottom: 1px solid #ddd;'>Quantity</th>");
+                emailBody.append("<th style='text-align: left; padding: 10px; border-bottom: 1px solid #ddd;'>Amount</th>");
                 emailBody.append("</tr>");
 
-                // Duyệt qua các sản phẩm trong giỏ hàng
+                // Duyệt qua sản phẩm trong giỏ hàng
                 for (Total totalItem : cart.getTotals()) {
                     emailBody.append("<tr>");
-                    emailBody.append("<td>").append(totalItem.getItem().getName()).append("</td>");
-                    emailBody.append("<td>").append(totalItem.getQuantity()).append("</td>");
-                    emailBody.append("<td>$").append(totalItem.finalPrice()).append("</td>");
+                    emailBody.append("<td style='padding: 10px; border-bottom: 1px solid #ddd;'>")
+                            .append(totalItem.getItem().getName()).append("</td>");
+                    emailBody.append("<td style='padding: 10px; border-bottom: 1px solid #ddd;'>")
+                            .append(totalItem.getQuantity()).append("</td>");
+                    emailBody.append("<td style='padding: 10px; border-bottom: 1px solid #ddd;'>$")
+                            .append(totalItem.finalPrice()).append("</td>");
                     emailBody.append("</tr>");
                 }
 
                 // Hàng tổng tiền
-                emailBody.append("<tr>");
-                emailBody.append("<td colspan='2' style='text-align: right; font-weight: bold;'>Total Price:</td>");
-                emailBody.append("<td><strong>$").append(cart.getTotalPrice()).append("</strong></td>");
+                emailBody.append("<tr style='background-color: #f1f1f1;'>");
+                emailBody.append("<td colspan='2' style='text-align: right; font-weight: bold; padding: 10px;'>Total Price:</td>");
+                emailBody.append("<td style='padding: 10px;'><strong>$").append(cart.getTotalPrice()).append("</strong></td>");
                 emailBody.append("</tr>");
             } else {
                 // Thông báo giỏ hàng trống
                 emailBody.append("<tr>");
-                emailBody.append("<td colspan='3'>Your cart is empty.</td>");
+                emailBody.append("<td colspan='3' style='text-align: center; padding: 15px; font-size: 14px; color: #888;'>");
+                emailBody.append("Your cart is empty.");
+                emailBody.append("</td>");
                 emailBody.append("</tr>");
             }
 
@@ -107,9 +112,9 @@ public class EmailListServlet extends HttpServlet {
             emailBody.append("<td colspan='3'>&nbsp;</td>");
             emailBody.append("</tr>");
 
-            // Hàng cuối cùng: Lời cảm ơn
+            // Footer: Lời cảm ơn cuối email
             emailBody.append("<tr>");
-            emailBody.append("<td colspan='3' style='text-align: left; background-color: #C4E7BA;'>");
+            emailBody.append("<td colspan='3' style='background-color: #4BA1F0; color: white; padding: 15px; text-align: left;'>");
             emailBody.append("Thank you for shopping with us!<br>");
             emailBody.append("Best regards,<br>");
             emailBody.append("Nguyen Le My Hoang");
@@ -118,6 +123,7 @@ public class EmailListServlet extends HttpServlet {
 
             emailBody.append("</table>");
             emailBody.append("</body></html>");
+
 
             boolean isBodyHTML = true;
             try {
